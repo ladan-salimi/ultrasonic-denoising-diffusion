@@ -27,7 +27,8 @@ cv2.waitKey(0)
 imgplot = plt.imshow(noise)
 plt.show()
 plt.imsave(r'C:\Users\ladan\Desktop\clustring\converted noisy.png',noise)
-####denoising with anisotropic_diffusion that is suitable for TV images
+#######################################################################################
+#denoising with anisotropic_diffusion that is suitable for TV images
 noisy_img= cv2.imread(r'C:\Users\ladan\Desktop\clustring\converted noisy.png')
 img_cleaned = anisotropic_diffusion(noisy_img,niter=80,kappa=60,gamma=0.3,option=1)
 imgplot = plt.imshow(img_cleaned)
